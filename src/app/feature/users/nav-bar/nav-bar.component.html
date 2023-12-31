@@ -2,3 +2,11 @@
   Recuerde conservar los id, no deben ser modificados
   ids = nav-bar__btn-list-user, nav-bar__btn-create-user, nav-bar__btn-logout
 -->
+
+<nav id="nav-bar__btn-list-user">
+  <ul>
+    <li><a routerLink="/list-users">List Users</a></li>
+    <li><a id="nav-bar__btn-create-user" routerLink="/create-user">Create User</a></li>
+    <li><a id="nav-bar__btn-logout" (click)="logout()">Logout</a></li>
+  </ul>
+</nav>

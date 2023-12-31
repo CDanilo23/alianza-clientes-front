@@ -47,6 +47,7 @@ export class LoginComponent implements OnInit{
         this.router.navigate(['/list-users']); 
       },
       (error) => {
+        console.error('Error en la solicitud:', error);
         this.errorMessage = 'Invalid email or password';
       }
     );
