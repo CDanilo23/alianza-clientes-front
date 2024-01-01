@@ -5,8 +5,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterUserByNamePipe implements PipeTransform {
 
-  transform(){
-   
+  transform(users: any[], searchTerm: string): any[] {
+   if(!users || !searchTerm){
+    return users;
+   }
+
+   return users.filter(user =>
+    user.first_name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
   }
 
 }

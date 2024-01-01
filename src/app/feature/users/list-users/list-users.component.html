@@ -3,7 +3,8 @@
   ids = user-list__filter, user-list__table, user-list__table-item-[index], user-list__table-item-[index]-avatar, user-list__table-item-[index]-first_name, user-list__table-item-[index]-email, user-list__table-item-[index]-btn-delete
   Remplazar [index] por el valor ejemplo "user-list__table-item-0"
 -->
-<table>
+
+<table id="user-list__table">
   <thead>
     <tr>
       <th>Email</th>
@@ -13,11 +14,17 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let user of users">
-      <td>{{ user.email }}</td>
-      <td>{{ user.first_name }} {{user.last_name}}</td>
-      <td><img [src]="user.avatar"  alt="User Avatar" height="50"></td>
-      <td>
+    <tr>
+      <td colspan="4">
+        <input [(ngModel)]="searchTerm" name="searchTerm" placeholder="Buscar por nombre">
+      </td>
+    </tr>
+    <tr *ngFor="let user of users | filterUserByName: searchTerm">
+      
+      <td id="user-list__table-item-[0]-email">{{ user.email }}</td>
+      <td id="user-list__table-item-[1]-first_name">{{ user.first_name }} {{user.last_name}}</td>
+      <td id="user-list__table-item-[2]-avatar"><img [src]="user.avatar"  alt="User Avatar" height="50"></td>
+      <td id="user-list__table-item-[3]-btn-delete">
         <button (click)="deleteUser(user.id)">Eliminar</button>
       </td>
     </tr>
