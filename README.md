@@ -18,17 +18,13 @@ The component must have the following functionalities:
 
 - When run the backend in the app should show 3 clients preloaded.
 
-- Clicking on the `New` button should show a popup this the fields (SharedKey, Name, LastName, Phone, Email, startDate, endDate).
+- Clicking on the `New` button it shows a popup with these fields (SharedKey, Name, LastName, Phone, Email, startDate, endDate).
 
 - The fields in the popup (SharedKey, Name, LastName, Phone, Email, startDate, endDate) are required.
 
 - When you create a client it should show in the table
 
 ## Project Specifications
-
-**Read Only Files**
-- src/app/app.component.spec.ts
-- src/app/customer-list/customer-list.component.spec.ts
 
 **Commands**
 - run: 
