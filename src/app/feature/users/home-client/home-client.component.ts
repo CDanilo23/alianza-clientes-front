@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-home-user',
-  templateUrl: './home-user.component.html',
-  styleUrls: ['./home-user.component.scss']
+  selector: 'app-home-client',
+  templateUrl: './home-client.component.html',
+  styleUrls: ['./home-client.component.scss']
 })
-export class HomeUserComponent implements OnInit {
+export class HomeClientComponent implements OnInit {
 
   constructor() { }
 
